@@ -14,7 +14,7 @@ If you have learned these before, just do the following:
 2. Within it create a folder ``Lab1`` and a file ``README.md``, and write something in there.
 
 ## Install Git
-You need this to learn how to maintain repository, where you will store your classworks.
+You need this to learn how to maintain a code repository, a place where you will store your classworks.
 1. Download and install from here: https://git-scm.com/install/
 2. Open git bash and verify successful installation by running this command:
 ```bash
@@ -48,13 +48,15 @@ ssh-keygen -t ed25519 -C "YourGitHubUserName@users.noreply.github.com" -f ~/.ssh
 It will ask you to create a password. Then you should see ``id_github`` and ``id_github.pub`` at ``C:\Users\YourUserName\.ssh`` if you are using Windows.  
 If you can't find it, see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
 
+Using ``YourGitHubUserName@users.noreply.github.com`` is recommended so you won't accidentally leak your personal/school email, but if you don't mind, you can also set your email to public in your GitHub profile, then you can create the key and later make commits using your own email.
+
 ## Register your SSH private key
-Your git doesn't recognize this new key yet, so you need to add it:
+Your Git doesn't recognize this new key yet, so you need to add it:
 ```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_github
 ```
-It should ask you for the password you just created, then ``Identity added``.
+It should ask you for the password you just created, then if it says ``Identity added`` you have successfully added your new key.
 
 ## Upload your SSH public key to GitHub
 
@@ -80,7 +82,7 @@ mkdir CSCI-3212
 cd CSCI-3212
 ```
 The first line creates a folder called "CSCI-3212" on your computer, and the second line move you into it.  
-You will use this for your class projects.
+You will use this to store your class projects and assignment submissions.  
 
 ## Create your Git Repository locally
 ```bash

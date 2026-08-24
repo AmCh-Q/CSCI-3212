@@ -51,12 +51,26 @@ If you can't find it, see https://docs.github.com/en/authentication/connecting-t
 Using ``YourGitHubUserName@users.noreply.github.com`` is recommended so you won't accidentally leak your personal/school email, but if you don't mind, you can also set your email to public in your GitHub profile, then you can create the key and later make commits using your own email.
 
 ## Register your SSH private key
-Your Git doesn't recognize this new key yet, so you need to add it:
+Your local SSH doesn't recognize this new key, so Git can't use it yet, so you need to add your private key:
 ```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_github
 ```
 It should ask you for the password you just created, then if it says ``Identity added`` you have successfully added your new key.
+
+### Common Issues if you are using PowerShell instead of Git Bash
+1. Git for Windows often bundles its own ssh.exe and doesn't use the canonical one that gets installed alongside Git, check:
+```bash
+git config --get core.sshCommand
+# If it returns nothing, try setting it:
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
+2. You might have trouble starting ``ssh-agent``, launch your powershell in administrator mode and try the following:
+```bash
+Set-Service -Name ssh-agent -StartupType Manual
+Start-Service ssh-agent
+ssh-add "C:\Users\YourUserName\.ssh\id_github"
+```
 
 ## Upload your SSH public key to GitHub
 

@@ -1,4 +1,4 @@
-# CSCI 3212 Lab 1
+# CSCI 3212 Lab 0
 Guide by [AmCh-Q](https://github.com/AmCh-Q) on GitHub.
 
 ## Goals
@@ -11,7 +11,7 @@ You might need 2-8 hours to complete this. Consider each section below a major g
 
 If you have learned these before, just do the following:
 1. Create a GitHub repository ``CSCI-3212``
-2. Within it create a folder ``Lab1`` and a file ``README.md``, and write something in there.
+2. Within it create a folder ``Lab0`` and a file ``README.md``, and write something in there.
 
 ## Install Git
 You need this to learn how to maintain a code repository, a place where you will store your classworks.
@@ -93,13 +93,13 @@ git config user.email "YourGitHubUserName@users.noreply.github.com"
 This turns your folder into a git repository.
 
 ## Write something
-Go inside ``CSCI-3212``, create a folder ``Lab1``.  
-Go inside ``Lab1``, create a text file ``README.md``, write something in there.  
+Go inside ``CSCI-3212``, create a folder ``Lab0``.  
+Go inside ``Lab0``, create a text file ``README.md``, write something in there.  
 Write whatever you want, but know that **other people can see it** later.  
 Alternatively, run the following commands:
 ```bash
-mkdir Lab1
-cd Lab1
+mkdir Lab0
+cd Lab0
 echo "# CSCI-3212" >> README.md
 ```
 

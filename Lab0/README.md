@@ -110,12 +110,7 @@ This turns your folder into a git repository.
 Go inside ``CSCI-3212``, create a folder ``Lab0``.  
 Go inside ``Lab0``, create a text file ``README.md``, write something in there.  
 Write whatever you want, but know that **other people can see it** later.  
-Alternatively, run the following commands:
-```bash
-mkdir Lab0
-cd Lab0
-echo "# CSCI-3212" >> README.md
-```
+You might want to use this opportunity to create your first python scripts.  
 
 ## Commit it
 ```bash
